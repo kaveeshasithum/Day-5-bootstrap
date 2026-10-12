@@ -1,100 +1,213 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+```
+<title>Fast Food Delivery</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar-brand h1 {
+        font-size: 30px;
+        margin: 0;
+        color: #dc3545;
+    }
+    .food-img {
+        height: 220px;
+        object-fit: cover;
+    }
+    .card {
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-title {
+        font-weight: bold;
+    }
+
+    .price {
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    .btn-order {
+        width: 100%;
+    }
+</style>
+
+
 </head>
+
 <body>
-     <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="https://img.freepik.com/premium-vector/minimalist-food-delivery-logo-design-modern-simple-branding-delivery-services_838011-283.jpg" alt="Logo" width="100" height="84" class="d-inline-block align-text-top">
-      <h1>Fast Food Delivery</h1>
-    </a>
-  </div>
+
+<!-- Navbar -->
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">
+            <img
+                src="https://img.freepik.com/premium-vector/minimalist-food-delivery-logo-design-modern-simple-branding-delivery-services_838011-283.jpg"
+                alt="Logo"
+                width="100"
+                height="84">
+
+            <h1>Fast Food Delivery</h1>
+        </a>
+
+    </div>
 </nav>
-<div class="container">
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="p-3 border rounded shadow">
-                <img src="https://tse4.mm.bing.net/th/id/OIP.Pfjazh_SxXaDTr5zwS30igHaEo?r=0&pid=Api&h=220&P=0"alt="Pizza" class="img-fluid rounded">
-                  <h3>Pizza</h3>
-                <h4>Price: Rs.1800</h4>
-                <button class="btn btn-primary">Order Now</button>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Our Food Menu</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 shadow">
+
+                <img  src="https://tse4.mm.bing.net/th/id/OIP.Pfjazh_SxXaDTr5zwS30igHaEo?r=0&pid=Api&h=220&P=0"class="card-img-top food-img"   alt="Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Pizza</h5>
+                    <p class="card-text">Delicious and cheesy pizza made with fresh ingredients.</p>
+                    <h5 class="price">Price: Rs. 1800</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
+
             </div>
         </div>
-    <div class="col-md-4">
-            <div class="p-3 border rounded shadow">
-                <img src="https://tse1.mm.bing.net/th/id/OIP.bZzh-uiQckyWxnoQuN7OjAHaE8?r=0&pid=Api&h=220&P=0" alt="Burger" class="img-fluid rounded">
-                <h3 >Burger</h3>
-                <h4>Price: Rs.1000</h4>
-                <button class="btn btn-primary">Order Now</button>
+        <div class="col">
+            <div class="card h-100 shadow">
+
+                <img src="https://tse1.mm.bing.net/th/id/OIP.bZzh-uiQckyWxnoQuN7OjAHaE8?r=0&pid=Api&h=220&P=0" class="card-img-top food-img"  alt="Burger">
+                <div class="card-body">
+                    <h5 class="card-title">Burger</h5>
+                    <p class="card-text">Juicy burger with fresh vegetables and tasty sauce.</p>
+                    <h5 class="price">Price: Rs. 1000</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
+
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="p-3 border rounded shadow">
-                <img src="https://tse3.mm.bing.net/th/id/OIP.ddGrAhB5s3nFO2Ye55gU_AHaF7?r=0&pid=Api&h=220&P=0"alt="Chicken Fries" class="img-fluid rounded">
-                <h3 >Chicken Fries</h3>
-                <h4>Price: Rs.900</h4>
-                <button class="btn btn-primary">Order Now</button>
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img  src="https://tse3.mm.bing.net/th/id/OIP.ddGrAhB5s3nFO2Ye55gU_AHaF7?r=0&pid=Api&h=220&P=0"  class="card-img-top food-img" alt="Chicken Fries">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Fries</h5>
+                    <p class="card-text">Crispy and delicious chicken fries.</p>
+                    <h5 class="price">Price: Rs. 900</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
             </div>
         </div>
-    <div class="col-md-4">
-            <div class="p-3 border rounded shadow">
-                <img src="https://cdn.pixabay.com/photo/2021/06/03/01/37/kottu-6305693_1280.jpg"alt="Kottu" class="img-fluid rounded">
-                <h3 >Kottu</h3>
-                <h4>Price: Rs.900</h4>
-                <button class="btn btn-primary">Order Now</button>
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="https://cdn.pixabay.com/photo/2021/06/03/01/37/kottu-6305693_1280.jpg" class="card-img-top food-img" alt="Kottu">
+
+                <div class="card-body">
+                    <h5 class="card-title">Kottu</h5>
+                    <p class="card-text">Sri Lankan style kottu prepared with delicious spices.</p>
+                    <h5 class="price">Price: Rs. 900</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
-     <div class="p-3 border rounded shadow">
-                <img src="https://tse1.mm.bing.net/th/id/OIP.Xi40F4KEdYErOvxri7J97QHaFj?r=0&pid=Api&h=220&P=0"alt="Nasiguran" class="img-fluid rounded">
-                <h3 >Nasiguran</h3>
-                <h4>Price: Rs.800</h4>
-                <button class="btn btn-primary">Order Now</button>
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.Xi40F4KEdYErOvxri7J97QHaFj?r=0&pid=Api&h=220&P=0"
+                    class="card-img-top food-img"
+                    alt="Nasiguran">
+
+                <div class="card-body">
+                    <h5 class="card-title">Nasiguran</h5>
+                    <p class="card-text">Tasty fried rice prepared with special spices.</p>
+                    <h5 class="price">Price: Rs. 800</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
+
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="p-3 border rounded shadow">
-           <img src="https://tse4.mm.bing.net/th/id/OIP.MfRzYZAMltY5TPyj0iBskQHaHa?r=0&pid=Api&h=220&P=0" alt="Chicken Fried Rice" class="img-fluid rounded">
-                <h3>Chicken Fried Rice</h3>
-           <h4>Price: Rs.600</h4>
-                <button class="btn btn-primary">Order Now</button>
+        <div class="col">
+            <div class="card h-100 shadow">
+
+                <img
+                    src="https://tse4.mm.bing.net/th/id/OIP.MfRzYZAMltY5TPyj0iBskQHaHa?r=0&pid=Api&h=220&P=0"
+                    class="card-img-top food-img"
+                    alt="Chicken Fried Rice">
+
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Fried Rice</h5>
+                    <p class="card-text">Flavorful chicken fried rice with fresh ingredients.</p>
+                    <h5 class="price">Price: Rs. 600</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
+
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="p-3 border rounded shadow">
-            <img src="https://tse2.mm.bing.net/th/id/OIP.N8b699jHsQdVTcPG7_r0fQHaE8?r=0&pid=Api&h=220&P=0"alt="Milk rice" class="img-fluid rounded">
-             <h3 >Milk rice</h3>
-                <h4>Price: Rs. 50</h4>
-              <button class="btn btn-primary">Order Now</button>
+        <div class="col">
+            <div class="card h-100 shadow">
+
+                <img
+                    src="https://tse2.mm.bing.net/th/id/OIP.N8b699jHsQdVTcPG7_r0fQHaE8?r=0&pid=Api&h=220&P=0"
+                    class="card-img-top food-img"
+                    alt="Milk Rice">
+
+                <div class="card-body">
+                    <h5 class="card-title">Milk Rice</h5>
+                    <p class="card-text">Traditional Sri Lankan milk rice.</p>
+                    <h5 class="price">Price: Rs. 50</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
+
             </div>
         </div>
-        <div class="col-md-4">
-         <div class="p-3 border rounded shadow">
-                <img src="https://tse2.mm.bing.net/th/id/OIP.WoLpVDp9zcf_8eSStAugAgHaHa?r=0&pid=Api&h=220&P=0"alt="cherry ice cream" class="img-fluid rounded">
-              <h3 >cherry ice cream</h3>
-                <h4>Price: Rs. 100</h4>
-                <button class="btn btn-primary">Order Now</button>
+        <div class="col">
+            <div class="card h-100 shadow">
+
+                <img
+                    src="https://tse2.mm.bing.net/th/id/OIP.WoLpVDp9zcf_8eSStAugAgHaHa?r=0&pid=Api&h=220&P=0"
+                    class="card-img-top food-img"
+                    alt="Cherry Ice Cream">
+
+                <div class="card-body">
+                    <h5 class="card-title">Cherry Ice Cream</h5>
+                    <p class="card-text">Sweet and creamy cherry ice cream.</p>
+                    <h5 class="price">Price: Rs. 100</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
+
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="p-3 border rounded shadow">
-                <img src="https://tse3.mm.bing.net/th/id/OIP.Q5YOZDnRs7x_f0412GjPSAHaFL?r=0&pid=Api&h=220&P=0"alt="watalappan" class="img-fluid rounded">
-                <h3 >watalappan</h3>
-                <h4>Price: Rs. 150</h4>
-                <button class="btn btn-primary">Order Now</button>
+        <div class="col">
+            <div class="card h-100 shadow">
+
+                <img
+                    src="https://tse3.mm.bing.net/th/id/OIP.Q5YOZDnRs7x_f0412GjPSAHaFL?r=0&pid=Api&h=220&P=0"
+                    class="card-img-top food-img"
+                    alt="Watalappan">
+
+                <div class="card-body">
+                    <h5 class="card-title">Watalappan</h5>
+                    <p class="card-text">Traditional Sri Lankan sweet dessert.</p>
+                    <h5 class="price">Price: Rs. 150</h5>
+                    <button class="btn btn-primary btn-order">Order Now</button>
+                </div>
+
             </div>
         </div>
 
     </div>
 </div>
 
-
-
-
+<script src="app.js"></script>
 </body>
 </html>
