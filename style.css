@@ -1,0 +1,443 @@
+
+
+:root {
+    --bg-black: #0d0d0d;
+    --bg-dark-card: #181818;
+    --bg-dark-elevated: #222222;
+    --accent-red: #dc2626;
+    --light-red: #ff6b6b;
+    --soft-red-bg: rgba(255, 107, 107, 0.14);
+    --border-red: rgba(255, 107, 107, 0.35);
+    --text-light: #f5f5f5;
+    --text-muted-light: #b8b8b8;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: #121212 !important;
+    border-bottom: 1px solid var(--border-red);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.65);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-brand h1 {
+    font-size: 26px;
+    margin: 0;
+    color: var(--light-red);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--light-red) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--light-red);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.btn-cart {
+    background-color: var(--light-red);
+    color: #111111;
+    font-weight: 700;
+    border: none;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-cart:hover {
+    background-color: var(--accent-red);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+#cart-count {
+    background-color: #0d0d0d !important;
+    color: var(--light-red);
+    border: 1px solid var(--light-red);
+}
+
+
+/* ================= HERO BANNER ================= */
+
+.hero-banner {
+    background:
+        linear-gradient(135deg, rgba(13, 13, 13, 0.88), rgba(127, 29, 29, 0.65)),
+        url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&auto=format&fit=crop&q=80') center/cover no-repeat;
+
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-red);
+}
+
+.hero-banner h2 {
+    color: #ffffff;
+}
+
+.hero-banner .lead {
+    color: #ffe3e3;
+}
+
+.search-box {
+    background-color: #161616;
+    color: #ffffff;
+    border: 1.5px solid var(--light-red);
+    border-radius: 10px;
+}
+
+.search-box::placeholder {
+    color: #c9a6a6;
+}
+
+.search-box:focus {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border-color: #ff8c8c;
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 107, 0.25);
+}
+
+
+/* ================= SECTION HEADINGS ================= */
+
+.section-title {
+    font-weight: 800;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    width: 65%;
+    height: 4px;
+    background: var(--light-red);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+}
+
+.drinks-title::after {
+    background: #ff8787;
+}
+
+.subtitle {
+    color: var(--text-muted-light);
+}
+
+.divider-line {
+    border-color: var(--border-red);
+    opacity: 1;
+}
+
+
+/* ================= STANDARD CARDS ================= */
+
+.card {
+    background-color: var(--bg-dark-card);
+    color: var(--text-light);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--light-red);
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.18);
+}
+
+.food-img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 107, 107, 0.18);
+}
+
+.card-title {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.card-text {
+    color: var(--text-muted-light);
+}
+
+.card-meta {
+    color: #ff9e9e;
+}
+
+.price {
+    color: var(--light-red);
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+
+/* ================= OVERLAY CARDS ================= */
+
+.overlay-card {
+    background-color: #141414 !important;
+    min-height: 260px;
+}
+
+.overlay-img {
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+    opacity: 0.45;
+}
+
+.card-img-overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(13, 13, 13, 0.25) 0%,
+        rgba(13, 13, 13, 0.88) 70%,
+        rgba(127, 29, 29, 0.85) 100%
+    );
+}
+
+.text-light-red {
+    color: var(--light-red) !important;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn-order {
+    width: 100%;
+    font-weight: 700;
+    background-color: var(--light-red);
+    color: #111111;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.15s ease;
+}
+
+.btn-order:hover {
+    background-color: var(--accent-red);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-drink {
+    background-color: #ff8585;
+    color: #111111;
+}
+
+.btn-drink:hover {
+    background-color: #b91c1c;
+    color: #ffffff;
+}
+
+.btn-clear {
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--light-red);
+    border: 1.5px solid var(--light-red);
+    border-radius: 8px;
+    padding: 10px 12px;
+    transition: all 0.25s ease;
+}
+
+.btn-clear:hover {
+    background-color: rgba(255, 107, 107, 0.15);
+    color: #ffffff;
+}
+
+
+/* ================= BILL PANEL ================= */
+
+.bill-panel {
+    top: 88px;
+
+    /* Reduced bill height */
+    min-height: auto;
+
+    /* Small space on left side */
+    margin-left: 12px;
+    width: calc(100% - 12px);
+
+    background-color: var(--bg-dark-card);
+
+    border: 1.5px solid var(--border-red);
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.65);
+
+    z-index: 10;
+}
+
+
+/* BILL HEADER */
+
+.bill-header {
+    background: linear-gradient(135deg, #2a0d0d, #181818);
+
+    color: var(--light-red);
+
+    padding: 10px 12px;
+
+    border-bottom: 1px solid var(--border-red);
+}
+
+.bill-header h4 {
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.bill-badge {
+    background-color: var(--light-red);
+    color: #111111;
+    font-weight: 700;
+    padding: 5px 9px;
+}
+
+
+/* BILL BODY */
+
+.bill-body {
+    padding: 12px;
+}
+
+
+/* BILL ITEMS */
+
+.bill-items-list {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.empty-bill-msg {
+    color: var(--text-muted-light);
+
+    background-color: var(--bg-dark-elevated);
+
+    border-radius: 12px;
+
+    padding: 15px 10px;
+
+    border: 1px dashed var(--border-red);
+
+    width: 100%;
+}
+
+
+/* BILL SUMMARY */
+
+.bill-summary {
+    border-top: 1px solid var(--border-red);
+}
+
+.bill-summary button {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+
+/* LIST GROUP */
+
+.list-group-item {
+    background-color: var(--bg-dark-elevated);
+    color: var(--text-light);
+
+    border-color: rgba(255, 107, 107, 0.2);
+
+    margin-bottom: 8px;
+
+    border-radius: 8px !important;
+}
+
+
+/* ================= TOAST ================= */
+
+.toast {
+    background-color: var(--bg-dark-elevated);
+    color: var(--light-red);
+    border: 1px solid var(--light-red) !important;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #080808;
+    color: var(--text-muted-light);
+    border-top: 1px solid var(--border-red);
+}
+
+footer h5 {
+    color: var(--light-red);
+    font-weight: 700;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+    .bill-panel {
+        margin-left: 0;
+        width: 100%;
+        position: relative !important;
+        top: 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .navbar-brand h1 {
+        font-size: 20px;
+    }
+
+    .hero-banner {
+        padding: 40px 15px;
+    }
+
+    .food-img {
+        height: 180px;
+    }
+
+    .bill-header h4 {
+        font-size: 15px;
+    }
+
+}
