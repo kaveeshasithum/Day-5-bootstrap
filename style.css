@@ -1,4 +1,5 @@
 
+/* Red, Black & Light Red Theme */
 
 :root {
     --bg-black: #0d0d0d;
@@ -280,17 +281,24 @@ body {
 }
 
 
+#menu-section {
+    padding-left: 25px;
+}
 /* ================= BILL PANEL ================= */
 
 .bill-panel {
     top: 88px;
 
-    /* Reduced bill height */
-    min-height: auto;
+    /* Smaller Bill Panel */
+    width: 95% !important;
 
-    /* Small space on left side */
-    margin-left: 12px;
-    width: calc(100% - 12px);
+    /* Left Side Gap */
+    margin-left: auto !important;
+    margin-right: 0 !important;
+
+    /* Reduce Height */
+    min-height: auto !important;
+    height: auto !important;
 
     background-color: var(--bg-dark-card);
 
@@ -319,7 +327,7 @@ body {
 
 .bill-header h4 {
     font-weight: 800;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .bill-badge {
@@ -352,7 +360,7 @@ body {
 
     border-radius: 12px;
 
-    padding: 15px 10px;
+    padding: 15px 8px;
 
     border: 1px dashed var(--border-red);
 
@@ -414,13 +422,18 @@ footer h5 {
 @media (max-width: 991px) {
 
     .bill-panel {
-        margin-left: 0;
-        width: 100%;
+        width: 100% !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
         position: relative !important;
+
         top: 0;
     }
 
 }
+
 
 @media (max-width: 576px) {
 
@@ -440,4 +453,37 @@ footer h5 {
         font-size: 15px;
     }
 
+}
+.btn-update {
+    font-weight: 700;
+    background-color: var(--light-red);
+    color: #111111;
+    border: 1.5px solid var(--light-red);
+    border-radius: 8px;
+    padding: 8px 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-update:hover {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-delete {
+    font-weight: 700;
+    background-color: var(--accent-red);
+    color: #ffffff;
+    border: 1.5px solid var(--accent-red);
+    border-radius: 8px;
+    padding: 8px 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+    background-color: #991b1b;
+    border-color: #991b1b;
+    color: #ffffff;
+    transform: translateY(-1px);
 }
