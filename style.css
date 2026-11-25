@@ -481,9 +481,3 @@ footer h5 {
     transition: all 0.2s ease;
 }
 
-.btn-delete:hover {
-    background-color: #991b1b;
-    border-color: #991b1b;
-    color: #ffffff;
-    transform: translateY(-1px);
-}
