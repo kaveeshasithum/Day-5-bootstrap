@@ -471,13 +471,11 @@ footer h5 {
     transform: translateY(-1px);
 }
 
-.btn-delete {
-    font-weight: 700;
-    background-color: var(--accent-red);
-    color: #ffffff;
-    border: 1.5px solid var(--accent-red);
-    border-radius: 8px;
-    padding: 8px 10px;
-    transition: all 0.2s ease;
-}
 
+
+.btn-delete:hover {
+    background-color: #991b1b;
+    border-color: #991b1b;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
