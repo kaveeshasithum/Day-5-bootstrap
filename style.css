@@ -435,26 +435,16 @@ footer h5 {
 }
 
 
-@media (max-width: 576px) {
 
-    .navbar-brand h1 {
-        font-size: 20px;
-    }
-
-    .hero-banner {
-        padding: 40px 15px;
-    }
-
-    .food-img {
-        height: 180px;
-    }
-
-    .bill-header h4 {
-        font-size: 15px;
-    }
-
+.btn-update {
+    font-weight: 700;
+    background-color: var(--light-red);
+    color: #111111;
+    border: 1.5px solid var(--light-red);
+    border-radius: 8px;
+    padding: 8px 10px;
+    transition: all 0.2s ease;
 }
-
 
 .btn-update:hover {
     background-color: var(--accent-red);
