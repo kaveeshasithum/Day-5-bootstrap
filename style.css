@@ -454,17 +454,14 @@ footer h5 {
     }
 
 }
-.btn-update {
-    font-weight: 700;
-    background-color: var(--light-red);
-    color: #111111;
-    border: 1.5px solid var(--light-red);
-    border-radius: 8px;
-    padding: 8px 10px;
-    transition: all 0.2s ease;
+
+
+.btn-update:hover {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+    color: #ffffff;
+    transform: translateY(-1px);
 }
-
-
 
 .btn-delete {
     font-weight: 700;
