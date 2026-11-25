@@ -368,19 +368,19 @@ body {
 }
 
 
-/* BILL SUMMARY */
 
-.bill-summary {
-    border-top: 1px solid var(--border-red);
+/* LIST GROUP */
+
+.list-group-item {
+    background-color: var(--bg-dark-elevated);
+    color: var(--text-light);
+
+    border-color: rgba(255, 107, 107, 0.2);
+
+    margin-bottom: 8px;
+
+    border-radius: 8px !important;
 }
-
-.bill-summary button {
-    padding: 8px 10px;
-    font-size: 13px;
-}
-
-
-
 
 
 /* ================= TOAST ================= */
