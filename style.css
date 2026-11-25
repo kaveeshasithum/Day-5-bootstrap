@@ -403,21 +403,25 @@ body {
 }
 
 
-/* ================= FOOTER ================= */
 
-footer {
-    background-color: #080808;
-    color: var(--text-muted-light);
-    border-top: 1px solid var(--border-red);
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+    .bill-panel {
+        width: 100% !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        position: relative !important;
+
+        top: 0;
+    }
+
 }
-
-footer h5 {
-    color: var(--light-red);
-    font-weight: 700;
-}
-
-
-
 
 
 @media (max-width: 576px) {
