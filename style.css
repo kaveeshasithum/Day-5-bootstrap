@@ -394,16 +394,21 @@ body {
 }
 
 
-/* ================= TOAST ================= */
 
-.toast {
-    background-color: var(--bg-dark-elevated);
-    color: var(--light-red);
-    border: 1px solid var(--light-red) !important;
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #080808;
+    color: var(--text-muted-light);
+    border-top: 1px solid var(--border-red);
 }
 
-
-
+footer h5 {
+    color: var(--light-red);
+    font-weight: 700;
+}
 
 
 /* ================= RESPONSIVE ================= */
