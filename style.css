@@ -417,25 +417,28 @@ footer h5 {
 }
 
 
-/* ================= RESPONSIVE ================= */
 
-@media (max-width: 991px) {
 
-    .bill-panel {
-        width: 100% !important;
 
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+@media (max-width: 576px) {
 
-        position: relative !important;
+    .navbar-brand h1 {
+        font-size: 20px;
+    }
 
-        top: 0;
+    .hero-banner {
+        padding: 40px 15px;
+    }
+
+    .food-img {
+        height: 180px;
+    }
+
+    .bill-header h4 {
+        font-size: 15px;
     }
 
 }
-
-
-
 .btn-update {
     font-weight: 700;
     background-color: var(--light-red);
