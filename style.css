@@ -380,21 +380,16 @@ body {
 }
 
 
-/* LIST GROUP */
 
-.list-group-item {
+
+
+/* ================= TOAST ================= */
+
+.toast {
     background-color: var(--bg-dark-elevated);
-    color: var(--text-light);
-
-    border-color: rgba(255, 107, 107, 0.2);
-
-    margin-bottom: 8px;
-
-    border-radius: 8px !important;
+    color: var(--light-red);
+    border: 1px solid var(--light-red) !important;
 }
-
-
-
 
 
 /* ================= FOOTER ================= */
