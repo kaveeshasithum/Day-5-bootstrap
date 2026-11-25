@@ -347,11 +347,6 @@ body {
 
 /* BILL ITEMS */
 
-.bill-items-list {
-    max-height: 350px;
-    overflow-y: auto;
-    padding-right: 4px;
-}
 
 .empty-bill-msg {
     color: var(--text-muted-light);
