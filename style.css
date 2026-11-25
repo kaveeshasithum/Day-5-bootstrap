@@ -368,6 +368,17 @@ body {
 }
 
 
+/* BILL SUMMARY */
+
+.bill-summary {
+    border-top: 1px solid var(--border-red);
+}
+
+.bill-summary button {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
 
 /* LIST GROUP */
 
