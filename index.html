@@ -1,554 +1,523 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Fast Food Delivery - Burgers & Bottled Drinks</title>
 
-    <!-- Bootstrap CSS & Icons -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- External Custom CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-<!-- Sticky Navbar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container-fluid px-4">
-        <a class="navbar-brand" href="#">
-            <img
-                src="https://img.freepik.com/premium-vector/minimalist-food-delivery-logo-design-modern-simple-branding-delivery-services_838011-283.jpg"
-                alt="Logo"
-                width="60"
-                height="50"
-                class="rounded">
-            <h1>Fast Food Delivery</h1>
-        </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- ================= NAVBAR ================= -->
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav align-items-center gap-3">
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold" href="#featured-section">Specials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold" href="#burgers-section">Burgers (18)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold" href="#drinks-section">Bottled Drinks (6)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold" href="manage.html">Manage Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-cart position-relative" href="#bill-section">
-                        <i class="bi bi-receipt"></i> Bill
-                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                            0
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container-fluid px-4">
+
+            <a class="navbar-brand" href="#">
+
+                <img src="https://img.freepik.com/premium-vector/minimalist-food-delivery-logo-design-modern-simple-branding-delivery-services_838011-283.jpg"
+                    alt="Logo" width="60" height="50" class="rounded">
+
+                <h1>Fast Food Delivery</h1>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                <ul class="navbar-nav align-items-center gap-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#featured-section">
+                            Specials
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#burgers-section">
+                            Burgers (18)
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#drinks-section">
+                            Bottled Drinks (6)
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="manage.html">
+                            Manage Menu
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="btn btn-cart position-relative" href="#bill-section">
+
+                            <i class="bi bi-receipt"></i> Bill
+
+                            <span id="cart-count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                0
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <div class="hero-banner">
+
+        <div class="container">
+
+            <h2 class="display-5 fw-bold">
+                Juicy Burgers & Chilled Soda Bottles
+            </h2>
+
+            <p class="lead mb-4">
+                Freshly grilled burgers paired with ice-cold soft drinks delivered fast to your door.
+            </p>
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-6">
+
+                    <input type="text"
+                        id="searchInput"
+                        class="form-control form-control-lg search-box"
+                        placeholder="Search for a burger or drink bottle...">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <div class="container-fluid px-5 my-5">
+
+        <div class="row g-4">
+
+
+            <!-- ================= LEFT SIDE: MENU ================= -->
+
+            <div class="col-lg-8">
+
+
+                <!-- ================= FEATURED SECTION ================= -->
+
+                <div id="featured-section" class="mb-5">
+
+                    <div class="mb-4">
+
+                        <h2 class="section-title">
+                            Chef's Hot Picks
+                        </h2>
+
+                        <p class="subtitle mt-2">
+                            Signature burgers & chilled combo favorites
+                        </p>
+
+                    </div>
+
+
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+
+                        <!-- FEATURED BURGER 1 -->
+
+                        <div class="col food-item">
+
+                            <div class="card text-bg-dark overlay-card h-100">
+
+                                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&auto=format&fit=crop&q=60"
+                                    class="card-img overlay-img"
+                                    alt="Classic Beef Burger">
+
+                                <div class="card-img-overlay d-flex flex-column justify-content-end">
+
+                                    <h5 class="card-title">
+                                        Classic Beef Burger
+                                    </h5>
+
+                                    <p class="card-text">
+                                        Juicy grilled beef patty with fresh lettuce, tomatoes, and house sauce.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+
+                                        <span class="price">
+                                            Price: Rs. 1100
+                                        </span>
+
+                                        <button class="btn btn-sm btn-order w-auto px-3"
+                                            onclick="addToCart('Classic Beef Burger', 1100)">
+                                            Order Now
+                                        </button>
+
+                                    </div>
+
+                                    <p class="card-text mt-2 mb-0">
+
+                                        <small class="text-light-red">
+                                            Freshly grilled to order
+                                        </small>
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FEATURED BURGER 2 -->
+
+                        <div class="col food-item">
+
+                            <div class="card text-bg-dark overlay-card h-100">
+
+                                <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=800&auto=format&fit=crop&q=60"
+                                    class="card-img overlay-img"
+                                    alt="BBQ Bacon Burger">
+
+                                <div class="card-img-overlay d-flex flex-column justify-content-end">
+
+                                    <h5 class="card-title">
+                                        BBQ Bacon Burger
+                                    </h5>
+
+                                    <p class="card-text">
+                                        Smoky barbecue sauce, crispy bacon strips, onion rings, and melted cheese.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+
+                                        <span class="price">
+                                            Price: Rs. 1650
+                                        </span>
+
+                                        <button class="btn btn-sm btn-order w-auto px-3"
+                                            onclick="addToCart('BBQ Bacon Burger', 1650)">
+                                            Order Now
+                                        </button>
+
+                                    </div>
+
+                                    <p class="card-text mt-2 mb-0">
+
+                                        <small class="text-light-red">
+                                            Customer favorite
+                                        </small>
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <hr class="my-5 divider-line">
+
+
+                <!-- ================= BURGERS SECTION ================= -->
+
+                <div id="burgers-section" class="mb-5">
+
+                    <div class="mb-4">
+
+                        <h2 class="section-title">
+                            Our Burger Menu
+                        </h2>
+
+                        <p class="subtitle mt-2" id="burger-count-text">
+                            Choose from 18 handcrafted gourmet burgers
+                        </p>
+
+                    </div>
+
+
+                    <!-- Burger Cards Generated By JavaScript -->
+
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4"
+                        id="burgerList">
+
+                    </div>
+
+                </div>
+
+
+                <hr class="my-5 divider-line">
+
+
+                <!-- ================= DRINKS SECTION ================= -->
+
+                <div id="drinks-section">
+
+                    <div class="mb-4">
+
+                        <h2 class="section-title drinks-title">
+                            Chilled Soft Drink Bottles
+                        </h2>
+
+                        <p class="subtitle mt-2" id="bottle-count-text">
+                            Ice-cold bottled sodas to go with your burger
+                        </p>
+
+                    </div>
+
+
+                    <!-- Drink Cards Generated By JavaScript -->
+
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4"
+                        id="bottleList">
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- END LEFT SIDE MENU -->
+
+
+            <!-- ================= RIGHT SIDE: BILL ================= -->
+
+            <div class="col-lg-4 ps-4" id="bill-section">
+
+                <div class="bill-panel">
+
+                    <!-- BILL HEADER -->
+
+                    <div class="bill-header d-flex justify-content-between align-items-center">
+
+                        <h4 class="mb-0">
+
+                            <i class="bi bi-receipt-cutoff me-2"></i>
+                            Your Order Bill
+
+                        </h4>
+
+                        <span class="badge bill-badge" id="bill-items-badge">
+                            0 Items
                         </span>
-                    </a>
-                </li>
-            </ul>
+
+                    </div>
+
+
+                    <!-- BILL BODY -->
+
+                    <div class="bill-body">
+
+
+                        <!-- CART ITEMS -->
+
+                        <div id="cart-items" class="bill-items-list">
+
+                            <div class="text-center py-5 empty-bill-msg">
+
+                                <i class="bi bi-bag-plus display-5 d-block mb-2"></i>
+
+                                <p class="mb-0">
+                                    No items added yet.
+                                </p>
+
+                                <small>
+                                    Click "Order Now" on the left to add burgers or drinks to your bill.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BILL SUMMARY -->
+
+                        <div class="bill-summary pt-3 mt-3">
+
+
+                            <div class="d-flex justify-content-between mb-2">
+
+                                <span>
+                                    Subtotal:
+                                </span>
+
+                                <span id="cart-subtotal">
+                                    Rs. 0
+                                </span>
+
+                            </div>
+
+
+                            <div class="d-flex justify-content-between mb-2">
+
+                                <span>
+                                    Delivery Fee:
+                                </span>
+
+                                <span id="delivery-fee">
+                                    Rs. 0
+                                </span>
+
+                            </div>
+
+
+                            <hr class="divider-line my-2">
+
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <h5 class="mb-0 fw-bold">
+                                    Total Bill:
+                                </h5>
+
+                                <h4 class="price mb-0" id="cart-total">
+                                    Rs. 0
+                                </h4>
+
+                            </div>
+
+
+                            <!-- BILL BUTTONS -->
+
+                            <div class="d-flex gap-2">
+
+                                <button class="btn btn-clear w-50"
+                                    onclick="clearCart()">
+                                    Clear Bill
+                                </button>
+
+                                <button class="btn btn-order w-100"
+                                    onclick="checkout()">
+                                    Place Order
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- END RIGHT SIDE BILL -->
+
+
         </div>
+
     </div>
-</nav>
-<!-- Hero Section -->
-<div class="hero-banner">
-    <div class="container">
-        <h2 class="display-5 fw-bold">Juicy Burgers & Chilled Soda Bottles</h2>
-        <p class="lead mb-4">Freshly grilled burgers paired with ice-cold soft drinks delivered fast to your door.</p>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <input type="text" id="searchInput" class="form-control form-control-lg search-box" placeholder="Search for a burger or drink bottle...">
-            </div>
-        </div>
-    </div>
-</div>
+    <!-- END MAIN CONTENT -->
 
-<!-- Main Split Layout: Menu on Left (col-lg-8), Bill on Right (col-lg-4) -->
-<div class="container-fluid px-5 my-5">
-    <div class="row g-4">
-        <!-- LEFT SIDE: Burgers & Bottled Drinks -->
-        <div class="col-lg-8">
 
-            <!-- Featured Overlay Cards Section -->
-            <div id="featured-section" class="mb-5">
-                <div class="mb-4">
-                    <h2 class="section-title">Chef's Hot Picks</h2>
-                    <p class="subtitle mt-2">Signature burgers & chilled combo favorites</p>
+    <!-- ================= TOAST NOTIFICATION ================= -->
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+
+        <div id="orderToast" class="toast align-items-center border-0" role="alert">
+
+            <div class="d-flex">
+
+                <div class="toast-body" id="toast-message">
+                    Item added to bill!
                 </div>
 
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col food-item">
-                        <div class="card text-bg-dark overlay-card h-100">
-                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&auto=format&fit=crop&q=60" class="card-img overlay-img" alt="Classic Beef Burger">
-                            <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                <h5 class="card-title">Classic Beef Burger</h5>
-                                <p class="card-text">Juicy grilled beef patty with fresh lettuce, tomatoes, and house sauce.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-2">
-                                    <span class="price">Price: Rs. 1100</span>
-                                    <button class="btn btn-sm btn-order w-auto px-3" onclick="addToCart('Classic Beef Burger', 1100)">Order Now</button>
-                                </div>
-                                <p class="card-text mt-2 mb-0"><small class="text-light-red">Freshly grilled to order</small></p>
-                            </div>
-                        </div>
-                    </div>
+                <button type="button"
+                    class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast">
+                </button>
 
-                    <div class="col food-item">
-                        <div class="card text-bg-dark overlay-card h-100">
-                            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=800&auto=format&fit=crop&q=60" class="card-img overlay-img" alt="BBQ Bacon Burger">
-                            <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                <h5 class="card-title">BBQ Bacon Burger</h5>
-                                <p class="card-text">Smoky barbecue sauce, crispy bacon strips, onion rings, and melted cheese.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-2">
-                                    <span class="price">Price: Rs. 1650</span>
-                                    <button class="btn btn-sm btn-order w-auto px-3" onclick="addToCart('BBQ Bacon Burger', 1650)">Order Now</button>
-                                </div>
-                                <p class="card-text mt-2 mb-0"><small class="text-light-red">Customer favorite</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="my-5 divider-line">
-
-            <!-- Burgers Section -->
-            <div id="burgers-section" class="mb-5">
-                <div class="mb-4">
-                    <h2 class="section-title">Our Burger Menu</h2>
-                    <p class="subtitle mt-2">Choose from 18 handcrafted gourmet burgers</p>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="burger-list">
-
-                    <!-- 1. Classic Beef Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Classic Beef Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Classic Beef Burger</h5>
-                                <p class="card-text flex-grow-1">Juicy grilled beef patty with fresh lettuce, tomatoes, and house sauce.</p>
-                                <h5 class="price mb-3">Price: Rs. 1100</h5>
-                                <button class="btn btn-order" onclick="addToCart('Classic Beef Burger', 1100)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. Crispy Chicken Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://tse1.mm.bing.net/th/id/OIP.bZzh-uiQckyWxnoQuN7OjAHaE8?r=0&pid=Api&h=220&P=0" class="card-img-top food-img" alt="Crispy Chicken Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Crispy Chicken Burger</h5>
-                                <p class="card-text flex-grow-1">Juicy burger with fresh vegetables and tasty sauce.</p>
-                                <h5 class="price mb-3">Price: Rs. 1000</h5>
-                                <button class="btn btn-order" onclick="addToCart('Crispy Chicken Burger', 1000)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3. Double Cheese Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Double Cheese Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Double Cheese Burger</h5>
-                                <p class="card-text flex-grow-1">Double patties loaded with melted cheddar cheese, pickles, and onions.</p>
-                                <h5 class="price mb-3">Price: Rs. 1500</h5>
-                                <button class="btn btn-order" onclick="addToCart('Double Cheese Burger', 1500)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4. BBQ Bacon Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="BBQ Bacon Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">BBQ Bacon Burger</h5>
-                                <p class="card-text flex-grow-1">Smoky barbecue sauce, crispy bacon strips, onion rings, and melted cheese.</p>
-                                <h5 class="price mb-3">Price: Rs. 1650</h5>
-                                <button class="btn btn-order" onclick="addToCart('BBQ Bacon Burger', 1650)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. Spicy Zinger Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1615297928064-24977384d0da?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Spicy Zinger Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Spicy Zinger Burger</h5>
-                                <p class="card-text flex-grow-1">Extra crispy spicy chicken fillet topped with jalapenos and spicy mayo.</p>
-                                <h5 class="price mb-3">Price: Rs. 1200</h5>
-                                <button class="btn btn-order" onclick="addToCart('Spicy Zinger Burger', 1200)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 6. Veggie Delight Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Veggie Delight Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Veggie Delight Burger</h5>
-                                <p class="card-text flex-grow-1">Healthy crispy vegetable patty with fresh avocado, greens, and herb sauce.</p>
-                                <h5 class="price mb-3">Price: Rs. 850</h5>
-                                <button class="btn btn-order" onclick="addToCart('Veggie Delight Burger', 850)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 7. Mushroom Swiss Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Mushroom Swiss Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Mushroom Swiss Burger</h5>
-                                <p class="card-text flex-grow-1">Savory sauteed mushrooms with melted Swiss cheese over a tender patty.</p>
-                                <h5 class="price mb-3">Price: Rs. 1400</h5>
-                                <button class="btn btn-order" onclick="addToCart('Mushroom Swiss Burger', 1400)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 8. Crispy Fish Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Crispy Fish Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Crispy Fish Burger</h5>
-                                <p class="card-text flex-grow-1">Golden fried fish fillet served with tangy tartar sauce and crisp lettuce.</p>
-                                <h5 class="price mb-3">Price: Rs. 1050</h5>
-                                <button class="btn btn-order" onclick="addToCart('Crispy Fish Burger', 1050)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 9. Monster Tower Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Monster Tower Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Monster Tower Burger</h5>
-                                <p class="card-text flex-grow-1">Triple-stacked patties with egg, cheese, hash brown, and special sauce.</p>
-                                <h5 class="price mb-3">Price: Rs. 1950</h5>
-                                <button class="btn btn-order" onclick="addToCart('Monster Tower Burger', 1950)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 10. Peri-Peri Grilled Chicken Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Peri-Peri Grilled Chicken Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Peri-Peri Grilled Chicken Burger</h5>
-                                <p class="card-text flex-grow-1">Flame-grilled chicken breast marinated in zesty peri-peri sauce with garlic mayo.</p>
-                                <h5 class="price mb-3">Price: Rs. 1350</h5>
-                                <button class="btn btn-order" onclick="addToCart('Peri-Peri Grilled Chicken Burger', 1350)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 11. Hawaiian Teriyaki Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Hawaiian Teriyaki Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Hawaiian Teriyaki Burger</h5>
-                                <p class="card-text flex-grow-1">Sweet and savory glazed patty topped with a grilled pineapple ring and Swiss cheese.</p>
-                                <h5 class="price mb-3">Price: Rs. 1450</h5>
-                                <button class="btn btn-order" onclick="addToCart('Hawaiian Teriyaki Burger', 1450)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 12. Egg & Cheese Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Egg & Cheese Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Egg & Cheese Burger</h5>
-                                <p class="card-text flex-grow-1">Juicy patty topped with a sunny-side-up fried egg, crispy hash brown, and cheddar.</p>
-                                <h5 class="price mb-3">Price: Rs. 1250</h5>
-                                <button class="btn btn-order" onclick="addToCart('Egg & Cheese Burger', 1250)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 13. Tandoori Masala Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Tandoori Masala Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Tandoori Masala Burger</h5>
-                                <p class="card-text flex-grow-1">Spiced tandoori chicken patty with mint chutney, red onions, and creamy yogurt sauce.</p>
-                                <h5 class="price mb-3">Price: Rs. 1300</h5>
-                                <button class="btn btn-order" onclick="addToCart('Tandoori Masala Burger', 1300)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 14. Crispy Paneer Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1585238341267-1cfec2046a55?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Crispy Paneer Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Crispy Paneer Burger</h5>
-                                <p class="card-text flex-grow-1">Golden-fried spiced cottage cheese patty with crunchy slaw and tangy tandoori mayo.</p>
-                                <h5 class="price mb-3">Price: Rs. 1150</h5>
-                                <button class="btn btn-order" onclick="addToCart('Crispy Paneer Burger', 1150)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 15. Double Smash Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Double Smash Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Double Smash Burger</h5>
-                                <p class="card-text flex-grow-1">Two crispy-edged smashed patties with caramelized onions, American cheese, and secret sauce.</p>
-                                <h5 class="price mb-3">Price: Rs. 1750</h5>
-                                <button class="btn btn-order" onclick="addToCart('Double Smash Burger', 1750)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 16. Jalapeno Popper Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Jalapeno Popper Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Jalapeno Popper Burger</h5>
-                                <p class="card-text flex-grow-1">Loaded with spicy jalapenos, cream cheese, crispy bacon, and chipotle mayo.</p>
-                                <h5 class="price mb-3">Price: Rs. 1550</h5>
-                                <button class="btn btn-order" onclick="addToCart('Jalapeno Popper Burger', 1550)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 17. Garlic Butter Steak Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1534790566855-4cb788d389ec?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Garlic Butter Steak Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Garlic Butter Steak Burger</h5>
-                                <p class="card-text flex-grow-1">Rich roasted garlic herb butter melted over a thick seared beef patty and provolone.</p>
-                                <h5 class="price mb-3">Price: Rs. 1600</h5>
-                                <button class="btn btn-order" onclick="addToCart('Garlic Butter Steak Burger', 1600)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 18. Buffalo Ranch Chicken Burger -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Buffalo Ranch Chicken Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Buffalo Ranch Chicken Burger</h5>
-                                <p class="card-text flex-grow-1">Crispy chicken tossed in tangy buffalo hot sauce, cooled down with creamy ranch dressing.</p>
-                                <h5 class="price mb-3">Price: Rs. 1350</h5>
-                                <button class="btn btn-order" onclick="addToCart('Buffalo Ranch Chicken Burger', 1350)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Available for delivery</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <hr class="my-5 divider-line">
-
-            <!-- Bottled Drinks Section -->
-            <div id="drinks-section">
-                <div class="mb-4">
-                    <h2 class="section-title drinks-title">Chilled Soft Drink Bottles</h2>
-                    <p class="subtitle mt-2">Ice-cold bottled sodas to go with your burger</p>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-
-                    <!-- Drink 1: Coca-Cola Bottle -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Coca-Cola Bottle">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Coca-Cola (500ml Bottle)</h5>
-                                <p class="card-text flex-grow-1">Chilled 500ml Coca-Cola bottle to pair perfectly with your burger.</p>
-                                <h5 class="price mb-3">Price: Rs. 250</h5>
-                                <button class="btn btn-order btn-drink" onclick="addToCart('Coca-Cola (500ml Bottle)', 250)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Chilled 500ml bottle</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Drink 2: Pepsi Bottle -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1553456558-aff63285bdd1?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Pepsi Bottle">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Pepsi (500ml Bottle)</h5>
-                                <p class="card-text flex-grow-1">Ice-cold 500ml Pepsi bottle with crisp, refreshing cola taste.</p>
-                                <h5 class="price mb-3">Price: Rs. 250</h5>
-                                <button class="btn btn-order btn-drink" onclick="addToCart('Pepsi (500ml Bottle)', 250)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Chilled 500ml bottle</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Drink 3: Sprite Bottle -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=500&auto=format&fit=crop&q=60" class="card-img-top food-img" alt="Sprite Bottle">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Sprite (500ml Bottle)</h5>
-                                <p class="card-text flex-grow-1">Chilled 500ml clear lemon-lime soda bottle.</p>
-                                <h5 class="price mb-3">Price: Rs. 250</h5>
-                                <button class="btn btn-order btn-drink" onclick="addToCart('Sprite (500ml Bottle)', 250)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Chilled 500ml bottle</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Drink 4: Fanta Orange Bottle -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-3bnEnfhkhdTHqJv6LLL6debl5pxjWiW3zL9uDZE7lXNN3MBpcbw_f4M&s=10" class="card-img-top food-img" alt="Fanta Orange Bottle">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Fanta Orange (500ml Bottle)</h5>
-                                <p class="card-text flex-grow-1">Chilled 500ml sparkling orange soda bottle.</p>
-                                <h5 class="price mb-3">Price: Rs. 250</h5>
-                                <button class="btn btn-order btn-drink" onclick="addToCart('Fanta Orange (500ml Bottle)', 250)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Chilled 500ml bottle</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Drink 5: 7UP Bottle -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://m.media-amazon.com/images/I/71diSDvt5RL._AC_UF1000,1000_QL80_.jpg" class="card-img-top food-img" alt="7UP Bottle">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">7UP (500ml Bottle)</h5>
-                                <p class="card-text flex-grow-1">Crisp and bubbly 500ml 7UP soft drink bottle served cold.</p>
-                                <h5 class="price mb-3">Price: Rs. 250</h5>
-                                <button class="btn btn-order btn-drink" onclick="addToCart('7UP (500ml Bottle)', 250)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Chilled 500ml bottle</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Drink 6: Mountain Dew Bottle -->
-                    <div class="col food-item">
-                        <div class="card mb-3 h-100">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypCek7eBy5lOfzMp3geHgZgLuBkjlszpphn93gDcjxg&s=10" class="card-img-top food-img" alt="Mountain Dew Bottle">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Mountain Dew (500ml Bottle)</h5>
-                                <p class="card-text flex-grow-1">Chilled 500ml Mountain Dew bottle with bold citrus refreshment.</p>
-                                <h5 class="price mb-3">Price: Rs. 250</h5>
-                                <button class="btn btn-order btn-drink" onclick="addToCart('Mountain Dew (500ml Bottle)', 250)">Order Now</button>
-                                <p class="card-text mt-2 mb-0"><small class="card-meta">Chilled 500ml bottle</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
 
         </div>
 
-        <!-- RIGHT SIDE: Sticky Live Bill / Cart Panel -->
-        <div class="col-lg-4 ps-4" id="bill-section">
-            <div class="bill-panel sticky-top">
-                <div class="bill-header d-flex justify-content-between align-items-center">
-                    <h4 class="mb-0"><i class="bi bi-receipt-cutoff me-2"></i>Your Order Bill</h4>
-                    <span class="badge bill-badge" id="bill-items-badge">0 Items</span>
-                </div>
+    </div>
 
-                <div class="bill-body">
-                    <div id="cart-items" class="bill-items-list">
-                        <div class="text-center py-5 empty-bill-msg">
-                            <i class="bi bi-bag-plus display-5 d-block mb-2"></i>
-                            <p class="mb-0">No items added yet.</p>
-                            <small>Click "Order Now" on the left to add burgers or drinks to your bill.</small>
-                        </div>
-                    </div>
 
-                    <div class="bill-summary pt-3 mt-3">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Subtotal:</span>
-                            <span id="cart-subtotal">Rs. 0</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Delivery Fee:</span>
-                            <span id="delivery-fee">Rs. 0</span>
-                        </div>
-                        <hr class="divider-line my-2">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h5 class="mb-0 fw-bold">Total Bill:</h5>
-                            <h4 class="price mb-0" id="cart-total">Rs. 0</h4>
-                        </div>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-clear w-50" onclick="clearCart()">Clear Bill</button>
-                            <button class="btn btn-order w-100" onclick="checkout()">Place Order</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="py-4 mt-5">
+
+        <div class="container text-center">
+
+            <h5 class="mb-2">
+                Fast Food Delivery
+            </h5>
+
+            <p class="mb-1">
+                Hot Burgers & Chilled Soft Drink Bottles Delivered to Your Doorstep
+            </p>
+
+            <small>
+                &copy; 2026 Fast Food Delivery. All Rights Reserved.
+            </small>
+
         </div>
 
-    </div>
-</div>
+    </footer>
 
-<!-- Toast Notification -->
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="orderToast" class="toast align-items-center border-0" role="alert">
-        <div class="d-flex">
-            <div class="toast-body" id="toast-message">
-                Item added to bill!
-            </div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-        </div>
-    </div>
-</div>
 
-<!-- Footer -->
-<footer class="py-4 mt-5">
-    <div class="container text-center">
-        <h5 class="mb-2">Fast Food Delivery</h5>
-        <p class="mb-1">Hot Burgers & Chilled Soft Drink Bottles Delivered to Your Doorstep</p>
-        <small>&copy; 2026 Fast Food Delivery. All Rights Reserved.</small>
-    </div>
-</footer>
+    <!-- ================= JAVASCRIPT ================= -->
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="app.js"></script>
+    <!-- SweetAlert2 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Custom JavaScript -->
+
+    <script src="app.js"></script>
+
+
 </body>
+
 </html>
+```

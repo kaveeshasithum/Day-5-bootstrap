@@ -286,22 +286,26 @@ body {
 }
 /* ================= BILL PANEL ================= */
 
+#bill-section {
+    position: relative;
+    align-self: stretch;
+}
+
 .bill-panel {
-    top: 88px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
 
-    /* Smaller Bill Panel */
+    align-self: flex-start;
+
     width: 95% !important;
-
-    /* Left Side Gap */
     margin-left: auto !important;
     margin-right: 0 !important;
 
-    /* Reduce Height */
-    min-height: auto !important;
     height: auto !important;
+    min-height: auto !important;
 
     background-color: var(--bg-dark-card);
-
     border: 1.5px solid var(--border-red);
     border-radius: 16px;
 
@@ -311,8 +315,6 @@ body {
 
     z-index: 10;
 }
-
-
 /* BILL HEADER */
 
 .bill-header {
@@ -418,7 +420,6 @@ footer h5 {
 
 
 /* ================= RESPONSIVE ================= */
-
 @media (max-width: 991px) {
 
     .bill-panel {
